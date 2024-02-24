@@ -75,3 +75,34 @@ The following concepts will be tested in this project:
   - sudo echo "export J2SDKDIR=/usr/lib/jvm/oracle_jdk8 export J2REDIR=/usr/lib/jvm/oracle_jdk8/jre export PATH=$PATH:/usr/lib/jvm/oracle_jdk8/bin:/usr/lib/jvm/oracle_jdk8/db/bin:/usr/lib/jvm/oracle_jdk8/jre/bin export JAVA_HOME=/usr/lib/jvm/oracle_jdk8 export DERBY_HOME=/usr/lib/jvm/oracle_jdk8/db" | sudo tee -a /etc/profile.d/oraclejdk.sh
 
 ---
+
+# `Makefile`
+
+##### NB: A makefile Is Included to compile and run the codes on the terminal with the following commands:=
+
+- make clean
+- make
+- make run
+
+```Java
+default:
+	javac *.java
+run:
+	java Main
+clean:
+	rm -f *.class
+	reset
+	clear
+tar:
+	tar -cvz *.java -f Code.tar.gz
+untar:
+	tar -zxvf *.tar.gz
+```
+
+---
+
+---
+
+<p align="center">The End, Thank You</p>
+
+---
