@@ -19,3 +19,30 @@ Mutual exclusion will be enforced at the following key points:
 
 - **Client Chat**: The reader and writer shall log messages using mutual exclusion.
 - **Server**: Mutual exclusion shall be enforced to manage writers writing to the same client.
+
+## `3. Output`
+
+The following output will be produced:
+
+- When a thread attempts to send a message: `(SEND) [Thread-Name]: { sender:[client-name] , recipient:[client-name]}`.
+- When a thread successfully sends a message: `(SEND) [Thread-Name]: SUCCESSFUL`.
+- When a thread reads a new message: `(RECEIVE) [Thread-Name]: { recipient:[client-name], sender:[client-name] }`.
+
+## `4. Notes`
+
+You will have to get creative with handling threads, queues, and locks. Each queue should have their own lock when accessed. Any locks used in the program will be written from scratch, i.e., no using Java's pre-built locks. Some of Java's pre-built data structures might be used. Any locks used will be fair.
+
+## `5. Concepts`
+
+The following concepts will be tested in this project:
+
+- Consensus
+- Semaphores
+- TASLock
+- TTASLock
+- Exponential Backoff
+- ALock
+- CLH Lock
+- Composite Lock
+- Fine grain synchronisation
+- OptimisticList synchronisation
